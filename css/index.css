@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+
+
+.content {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 20px 25px;
+}
+
+@media screen and (min-width:650px){
+    .content {
+        padding: 20px 80px;
+    }
+}
+
+@media screen and (min-width:1020px) {
+
+    .content {
+        padding: 30px 230px;
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+
+    .content {
+        padding: 45px 580px;
+    }
+}

@@ -1,0 +1,22 @@
+@import 'variables.css';
+.content_portada {
+    position: relative;
+}
+
+.content_portada h2 {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 35px);
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+    color: var(--color-principal);
+    text-shadow: 2px 2px 3px black;
+    letter-spacing: 5px;
+}
+
+
+.portada {
+    width: 100%;
+    
+}

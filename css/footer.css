@@ -1,0 +1,177 @@
+@import 'variables.css';
+
+footer {
+    background-color: black;
+    color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+}
+.contenedor-footer {
+    padding: 20px 25px;
+    max-width: 2000px;
+}
+
+.contenedor-footer h2 {
+    text-align: center;    
+}
+.contenedor-footer p {
+    color: white;
+    text-align: center;
+}
+
+
+/* Estilos de enlaces de las pagina */
+
+.footer-links ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+.footer-links ul li {
+    display: flex;
+}
+.footer-links ul li a {
+    text-decoration: none;
+}
+
+
+
+/* Estilos boton*/
+.footer-boton {
+    display: flex;
+    padding: 25px 0;
+}
+
+.footer-boton button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+}
+  
+.footer-boton button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    
+}
+
+.footer-boton button:active {
+    transform: translateY(-1px);
+}
+
+
+/* Estilos de enlaces a redes sociales */
+.foooter-redes-sociales {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    gap: 15px;
+}
+.foooter-redes-sociales li {
+    display: flex;
+}
+
+.foooter-redes-sociales li a i{
+    font-size: 23px;
+    color: white;
+}
+
+
+/* Lineas divisoras */
+.contenedor-footer hr {
+    border-color: rgb(91, 95, 95);
+}
+
+
+
+
+
+
+@media screen and (min-width:650px) {
+    .contenedor-footer h2 {
+        font-size: 30px;
+    }
+    .contenedor-footer p {
+        font-size: 17px;
+    }
+    .footer-links {
+        font-size: 20px;
+    }
+
+    .foooter-redes-sociales {
+        gap: 23px;
+    }
+    .foooter-redes-sociales li a i {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width:1020px) {
+    .foooter-redes-sociales {
+        gap: 27px;
+    }
+    .foooter-redes-sociales li a i {
+        font-size: 35px;
+    }
+
+
+.footer-links ul li a {
+    transition: all 0.3s ease 0s;
+}
+    .foooter-redes-sociales li a i {
+        transition: all 0.3s ease 0s;
+    }
+    .foooter-redes-sociales li a i:hover {
+        transform: translateY(-7px);
+        color: var(--color-principal);
+    }
+    .footer-links ul li a:hover {
+        transform: translateY(-7px);
+        color: var(--color-principal);
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1600px){
+    .contenedor-footer h2 {
+        font-size: 43px;
+    }
+    .contenedor-footer p {
+    font-size: 30px;
+    }
+
+
+    .footer-links {
+        font-size: 38px;
+    }
+
+
+    .footer-boton button {
+        font-size: 25px;
+    }
+
+    .foooter-redes-sociales {
+        gap: 44px;
+    }
+    .foooter-redes-sociales li a i {
+        font-size: 55px;
+    }
+}

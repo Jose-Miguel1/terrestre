@@ -1,0 +1,313 @@
+@import "variables.css";
+
+
+header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-contenedor{
+  display: flex;
+    justify-content: space-between;
+    max-width: 2000px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--color-principal);
+}
+
+.contenedor-logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+header div img {
+    height: 45px;
+}
+header div h1{
+  font-size: 23px;
+}
+
+/*--------------*/
+
+.checkBoton {
+  font-size: 30px;
+  line-height: 80px;
+  display: block;
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .barra-navegacion {
+  left: 0%;
+}
+#check:checked ~ label {
+  position: fixed;
+  right: 20px;
+}
+#check:checked + label .fa-bars {
+  display: none; /* Oculta el ícono de barras */
+}
+#check:checked + label::before {
+  content: '\f00d'; /* Unicode de la "X" (FontAwesome) */
+  font-family: "FontAwesome";
+  font-size: 30px;
+}
+
+/*--------------*/
+
+.barra-navegacion {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+
+    top: 0;
+    left: -100%;
+    margin: 0;
+    width: 80%;
+    height: 100vh;
+    transition: left 0.5s;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.barra-navegacion h2 {
+  text-align: center;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: start;
+  padding: 0;
+}
+.enlaces li {
+  display: flex;
+}
+.enlaces li a {
+  text-decoration: none;
+}
+
+
+.buscador {
+    width: 100%;
+    height: 30px;
+    margin: 25px 0;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.buscador input {
+    width: 100%;
+    outline: none;
+    border: 0;
+}
+
+
+
+/*Boton de color de fondo*/
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+  
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+  
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+  
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+  
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+  
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+  
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(-10deg);
+  }
+  
+  75% {
+    transform: rotate(10deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+  
+.input:checked + .slider {
+  background-color: #183153;
+}
+  
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+  
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+
+
+
+
+
+
+@media screen and (min-width:650px){
+  header {
+    height: 90px;
+    padding: 0 60px;
+  }
+  header div img {
+    height: 70px;
+}
+  header div h1{
+    font-size: 38px;
+  }
+  .checkBoton {
+    font-size: 40px;
+  }
+
+  #check:checked ~ label {
+    right: 60px;
+  }
+  #check:checked + label::before {
+    font-size: 60px;
+  }
+
+  .barra-navegacion {
+    padding: 20px 55px;
+    font-size: 30px;
+
+  }
+
+  .buscador {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+.buscador input {
+  height: 70%;
+
+  }
+}
+
+
+
+@media screen and (min-width:1020px){
+  header {
+    height: 100px;
+  }
+  .checkBoton {
+    display: none;
+  }
+  .barra-navegacion {
+    position: static;
+    background-color: rgb(0, 0, 0);
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+.barra-navegacion h2, .buscador {
+  display: none;
+}
+.enlaces {
+flex-direction: row;
+margin: 0;
+gap: 35px;
+font-size: 28px;
+order: 3;
+}
+
+}
+
+@media screen and (min-width:1600px){
+  header {
+    height: 150px;
+  }
+  header div img {
+    height: 120px;
+}
+header div h1 {
+  font-size: 43px;
+}
+.enlaces {
+  font-size: 45px;
+}
+}
